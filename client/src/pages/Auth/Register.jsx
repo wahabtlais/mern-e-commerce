@@ -4,7 +4,6 @@ import { BiUser } from "react-icons/bi";
 import { AiOutlineLock, AiOutlineUnlock } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { useState } from "react";
-import { toast } from "react-toastify";
 
 const Register = () => {
   const [formData, setFormData] = useState({});
@@ -116,6 +115,9 @@ const Register = () => {
                 </Link>
               </span>
             </div>
+            <p className="text-red-600 text-center py-2 font-semibold">
+              {error && "Failed to register."}
+            </p>
           </form>
         </div>
       </div>
